@@ -1,0 +1,11 @@
+position,ref,alt,gene,variant_name,clinical_significance
+25245349,C,T,KRAS,NM_004985.5(KRAS):c.35G>A,Pathogenic/Likely Pathogenic
+25245349,C,A,KRAS,NM_004985.5(KRAS):c.35G>T,Pathogenic
+25245350,C,A,KRAS,NM_004985.5(KRAS):c.34G>T,Likely Pathogenic
+25245346,C,T,KRAS,NM_004985.5(KRAS):c.38G>A,Pathogenic
+25227340,T,A,KRAS,NM_004985.5(KRAS):c.183A>T,Pathogenic
+25245350,C,G,KRAS,NM_004985.5(KRAS):c.35G>C,Pathogenic/Likely pathogenic
+25227341,T,G,KRAS,NM_004985.5(KRAS):c.183A>C,Conflicting classifications of pathogenicity
+
+
+
