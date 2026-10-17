@@ -27,21 +27,30 @@ pip install -r requirements.txt
 
 ## Usage
 
-NCBI asks every Entrez user to identify themselves with an email address. The script reads it from the `ENTREZ_EMAIL` environment variable, so it never has to be written into the code.
+Before running, open `classify_kras_variants.py` and edit two lines near the top and in the NCBI section:
 
-**Windows (PowerShell)**
-```powershell
-$env:ENTREZ_EMAIL = "you@example.com"
-python classify_kras_variants.py
-```
+1. **Input file path:** set `VARIANTS_CSV` to the path of your variants CSV. To run the bundled demo, use:
+   ```python
+   VARIANTS_CSV = "kras_variants.csv"
+   ```
+   For a file elsewhere on your machine, use a raw string so Windows backslashes work:
+   ```python
+   VARIANTS_CSV = r"C:\path\to\your_variants.csv"
+   ```
+2. **Entrez email:** NCBI asks every Entrez user to identify themselves, so replace the placeholder with your own email address:
+   ```python
+   Entrez.email = "you@example.com"
+   ```
 
-**macOS / Linux**
+Then run the script from the repo folder:
+
 ```bash
-export ENTREZ_EMAIL="you@example.com"
 python classify_kras_variants.py
 ```
 
-By default the script reads `kras_variants.csv` from the current folder and writes `kras_variants_classified.csv`. To change either file, edit `VARIANTS_CSV` and `OUTPUT_CSV` at the top of the script.
+The results are printed to the terminal and saved to `kras_variants_classified.csv` in the current folder. To change the output name, edit `OUTPUT_CSV`.
+
+> **Note:** if you fork or contribute to this repo, don't commit your real email address. Keep the placeholder in the committed version.
 
 ## Input format
 
@@ -93,4 +102,4 @@ Demo variants come from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/) (NCBI),
 
 ## Author
 
-Vanssha
+Vanssha Kaitha
